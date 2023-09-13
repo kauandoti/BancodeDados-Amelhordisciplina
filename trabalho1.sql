@@ -95,3 +95,9 @@ SELECT a.nome AS autor, SUM(20 * COUNT(l.id)) AS receita_total
 FROM autores AS a
 LEFT JOIN livros AS l ON a.id = l.autor_id
 GROUP BY a.nome;
+
+/*19ª partte*/
+SELECT alunos.nome AS aluno, COUNT(matriculas.id) AS total_de_matriculas
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
+GROUP BY alunos.nome;
