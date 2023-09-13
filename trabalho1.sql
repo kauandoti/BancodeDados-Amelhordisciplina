@@ -3,3 +3,9 @@ SELECT titulo FROM livros;
 
 /*2ª partte*/
 SELECT nome FROM autores WHERE nascimento < '1900-01-01';
+
+/*3ª partte*/
+SELECT l.titulo 
+FROM livros AS l 
+JOIN autores AS a ON l.autor_id = a.id 
+WHERE a.nome = 'J.K. Rowling';
