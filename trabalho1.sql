@@ -89,3 +89,9 @@ FROM vendas
 GROUP BY produto
 ORDER BY receita_total ASC
 LIMIT 1;
+
+/*18ª partte*/
+SELECT a.nome AS autor, SUM(20 * COUNT(l.id)) AS receita_total
+FROM autores AS a
+LEFT JOIN livros AS l ON a.id = l.autor_id
+GROUP BY a.nome;
