@@ -31,3 +31,8 @@ GROUP BY a.nome;
 SELECT curso, COUNT(aluno_id) AS total_de_alunos
 FROM matriculas
 GROUP BY curso;
+
+/*8ª partte*/
+SELECT produto, AVG(receita) AS media_de_receita
+FROM vendas
+GROUP BY produto;
