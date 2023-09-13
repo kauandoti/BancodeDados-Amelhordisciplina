@@ -49,3 +49,8 @@ FROM autores AS a
 JOIN livros AS l ON a.id = l.autor_id
 GROUP BY a.nome
 HAVING COUNT(l.id) > 2;
+
+--11ª partte
+SELECT l.titulo AS livro, a.nome AS autor
+FROM livros AS l
+JOIN autores AS a ON l.autor_id = a.id;
