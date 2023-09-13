@@ -54,3 +54,8 @@ HAVING COUNT(l.id) > 2;
 SELECT l.titulo AS livro, a.nome AS autor
 FROM livros AS l
 JOIN autores AS a ON l.autor_id = a.id;
+
+/*12ª partte*/
+SELECT alunos.nome AS aluno, matriculas.curso
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id;
