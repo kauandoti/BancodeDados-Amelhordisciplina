@@ -9,3 +9,9 @@ SELECT l.titulo
 FROM livros AS l 
 JOIN autores AS a ON l.autor_id = a.id 
 WHERE a.nome = 'J.K. Rowling';
+
+/*4ª partte*/
+SELECT alunos.nome 
+FROM alunos 
+JOIN matriculas ON alunos.id = matriculas.aluno_id 
+WHERE matriculas.curso = 'Engenharia de Software';
