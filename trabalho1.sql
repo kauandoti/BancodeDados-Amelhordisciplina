@@ -69,3 +69,8 @@ LEFT JOIN livros AS l ON a.id = l.autor_id;
 SELECT alunos.nome AS aluno, COALESCE(matriculas.curso, 'Nenhum aluno registrado') AS curso
 FROM matriculas
 RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
+
+/*15ª partte*/
+SELECT alunos.nome AS aluno, matriculas.curso
+FROM alunos
+INNER JOIN matriculas ON alunos.id = matriculas.aluno_id;
